@@ -1,17 +1,5 @@
-import AsyncStorage from "@react-native-async-storage/async-storage"
-
 const GROUP_COLLECTION = '@ingnite-teams:groups'
+const PLAYER_COLLECTION = '@ingnite-teams:players'
 
-export { GROUP_COLLECTION }
+export { GROUP_COLLECTION, PLAYER_COLLECTION }
 
-export async function groupGetAll(){
-  try{
-    const storage = await AsyncStorage.getItem(GROUP_COLLECTION)
-  
-    const groups: string[] = storage ? JSON.parse(storage): []
-
-    return groups;
-  }catch(error){
-    throw error;
-  }
-}

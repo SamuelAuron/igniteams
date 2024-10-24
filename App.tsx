@@ -18,7 +18,7 @@ export default function App() {
         backgroundColor='transparent'
         translucent// Transparent status bar
       />
-      {fontsLoaded ? <Routes /> : <Loading/>}
+      <Routes /> 
     </ThemeProvider>
     
   );
